@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package api.subMessage.v1;
+
+option go_package = "./;sub_message";
+
+service GetSubMessageService {
+  rpc GetSubMessage(GetSubMessageReq) returns (GetSubMessageReply){}
+}
+
+message GetSubMessageReq {
+  string subMessage = 1;
+}
+
+message GetSubMessageReply {
+  string messageReply = 1;
+}
